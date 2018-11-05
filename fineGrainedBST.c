@@ -103,6 +103,10 @@ Node* deleteLocking(Tree* tree , Node* root , int val , Node* parent){
 	}
 }
 
+Node* delete(Tree* tree , int val){
+	return deleteLocking(tree , tree->root , val , NULL);
+}
+
 Node* findMin(Node* root , Node* parent){
 	if(root){
 		lock(root->lock);
